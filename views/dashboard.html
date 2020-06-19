@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="flex-dashboard">
-        <sidebar>
+        <sidebar id="sidebar">
             <div class="sidebar-title">
                 <img src="../imagens/heartbeat_editado.png" alt="Foto Heartbeat">
                 <h2>Health Track</h2>
@@ -57,14 +57,24 @@
                         <i class="fas fa-calculator"></i>
                         <a href="/views/imc.html">IMC</a>
                     </li>
+
+                
+                    <li class="sidebar_logout">
+                        <i class="fas fa-sign-out-alt"></i> 
+                        <a href="../index.html">Logout</a>
+                    </li>
+                    
+
+                    
+
                 </ul>
 
             </div><!--div menu-->
 
         </sidebar>
-        <main>
+        <main id="mainContent">
             <header>
-                <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+                <i id="iconMenu" onclick="responsiveSidebar()" class="fas fa-bars"></i>
                 <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
 
     
@@ -75,52 +85,60 @@
                 </div><!--div main content title-->
                 <div class="dashboard-content">
                     <div class="dashboard-flex-parent">
-                        <div class="dashboard-box">
-                            <div class="box-icon box-weight">
-                                <i class="fas fa-weight"></i>
-                            </div>
-                            <div class="value">80kg</div>
-                            <div class="type">PESO ATUAL</div>
-                            <div class="box-value-percentual">
-                                <i class="fas fa-chevron-up"></i>
-                                15%
-                            </div>
-                        </div><!--div dashboard box-->
-
-                        <div class="dashboard-box">
-                            <div class="box-icon box-pressure">
-                                <i class="fas fa-heartbeat"></i>
-                            </div>
-                            <div class="value">23MMHC</div>
-                            <div class="type">PRESSÃO ARTERIAL</div>
-                            <div class="box-value-percentual">
-                                <i class="fas fa-chevron-down"></i>
-                                <span>20%</span>
+                        <div class="dashboard-box teste">
+                            <div class="dashboard-box-wrapper">
+                                <div class="box-icon box-weight">
+                                    <i class="fas fa-weight"></i>
+                                </div>
+                                <div class="value">80kg</div>
+                                <div class="type">PESO ATUAL</div>
+                                <div class="box-value-percentual">
+                                    <i class="fas fa-chevron-up"></i>
+                                    15%
+                                </div>
                             </div>
                         </div><!--div dashboard box-->
 
-
-                        <div class="dashboard-box">
-                            <div class="box-icon box-imc">
-                                <i class="fas fa-calculator"></i>
-                            </div>
-                            <div class="value">23,2</div>
-                            <div class="type">IMC</div>
-                            <div class="box-value-percentual">
-                                <span>NORMAL</span>
+                        <div class="dashboard-box teste">
+                            <div class="dashboard-box-wrapper">
+                                <div class="box-icon box-pressure">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <div class="value">23MMHC</div>
+                                <div class="type">PRESSÃO ARTERIAL</div>
+                                <div class="box-value-percentual">
+                                    <i class="fas fa-chevron-down"></i>
+                                    <span>20%</span>
+                                </div>
                             </div>
                         </div><!--div dashboard box-->
 
 
-                        <div class="dashboard-box">
-                            <div class="box-icon box-workout">
-                                <i class="fas fa-biking"></i>
+                        <div class="dashboard-box teste">
+                            <div class="dashboard-box-wrapper">
+                                <div class="box-icon box-imc">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <div class="value">23,2</div>
+                                <div class="type">IMC</div>
+                                <div class="box-value-percentual">
+                                    <span>NORMAL</span>
+                                </div>
                             </div>
-                            <div class="value">BICICLETA</div>
-                            <div class="type">ATIVIDADE FÍSICA</div>
-                            <div class="box-value-percentual">
-                                <i class="far fa-clock"></i>
-                                <span>24/04/2020</span>
+                        </div><!--div dashboard box-->
+
+
+                        <div id="dashboard-box teste" class="dashboard-box">
+                            <div class="dashboard-box-wrapper">
+                                <div class="box-icon box-workout">
+                                    <i class="fas fa-biking"></i>
+                                </div>
+                                <div class="value">BICICLETA</div>
+                                <div class="type">ATIVIDADE FÍSICA</div>
+                                <div class="box-value-percentual">
+                                    <i class="far fa-clock"></i>
+                                    <span>24/04/2020</span>
+                                </div>
                             </div>
                         </div><!--div dashboard box-->
 
@@ -141,6 +159,7 @@
 <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="/plugins/fontawesome/js/all.min.js"></script>
 <script src="/js/ajax.js"></script>
+<script src="/js/menu.js"></script>
     
 </body>
 </html>

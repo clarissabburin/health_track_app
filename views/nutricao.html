@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="flex-dashboard">
-        <sidebar>
+        <sidebar id="sidebar">
             <div class="sidebar-title">
                 <img src="../imagens/heartbeat_editado.png" alt="Foto Heartbeat">
                 <h2>Health Track</h2>
@@ -57,14 +57,23 @@
                         <i class="fas fa-calculator"></i>
                         <a href="/views/imc.html">IMC</a>
                     </li>
+
+                    <li class="sidebar_logout">
+                        <i class="fas fa-sign-out-alt"></i> 
+                        <a href="../index.html">Logout</a>
+                    </li>
+
+
+
+
                 </ul>
 
             </div><!--div menu-->
 
         </sidebar>
-        <main>
+        <main id="mainContent">
             <header>
-                <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+                <i id="iconMenu" onclick="responsiveSidebar()" class="fas fa-bars"></i>
                 <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
 
     
@@ -77,10 +86,10 @@
                 <div class="panel-row">
                     <button class="panel panel-50" a-view="cadastrarAlimentos" onclick="fetchContent(this)" a-folder="alimentos">
                         <i class="fas fa-plus"></i>
-                        Cadastrar peso e altura</button>
+                        Cadastrar Refeição</button>
                     <button class="panel panel-50" a-view="visualizarAlimentos" onclick="fetchContent(this)" a-folder="alimentos">
                         <i class="fas fa-eye"></i>
-                        Visualizar peso e altura</button>
+                        Visualizar Refeição</button>
                 </div><!--final div panel-->
                 <div class="content" id="ajax-content">
                     
@@ -101,6 +110,8 @@
 <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="/plugins/fontawesome/js/all.min.js"></script>
 <script src="/js/ajax.js"></script>
+<script src="/js/menu.js"></script>
+
     
 </body>
 </html>

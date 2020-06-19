@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="flex-dashboard">
-        <sidebar>
+        <sidebar id="sidebar">
             <div class="sidebar-title">
                 <img src="../imagens/heartbeat_editado.png" alt="Foto Heartbeat">
                 <h2>Health Track</h2>
@@ -57,20 +57,29 @@
                         <i class="fas fa-calculator"></i>
                         <a href="imc.html">IMC</a>
                     </li>
+
+                    <li class="sidebar_logout">
+                        <i class="fas fa-sign-out-alt"></i> 
+                        <a href="../index.html">Logout</a>
+                    </li>
+
+
+
                 </ul>
 
             </div><!--div menu-->
 
         </sidebar>
-        <main>
+        <main id="mainContent">
             <header>
-                <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+                <i id="iconMenu" onclick="responsiveSidebar()" class="fas fa-bars"></i>
                 <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </header>
             <div class="main-content">
                 <div class="imc-parent">
                     <div class="imc">
-                        <h2>Seu IMC é <span>19,5</span> - <span>NORMAL</span></h2> 
+                        <h2>Seu IMC é <span>19,5</span> - <span class="status-imc-desktop">NORMAL</span></h2>
+                        <span class="status-imc-mobile">NORMAL</span> 
                     </div><!--div imc-->
                 </div><!--div imc-parent-->
 
@@ -89,6 +98,8 @@
 <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="/plugins/fontawesome/js/all.min.js"></script>
 <script src="/js/ajax.js"></script>
+<script src="/js/menu.js"></script>
+
     
 </body>
 </html>

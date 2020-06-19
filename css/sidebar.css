@@ -72,3 +72,50 @@ div.menu ul li a:hover{
     /*font-weight: bold;*/
     
 }
+
+.sidebar_logout{
+    display: none;
+}
+
+.hide{
+    left: -300px;
+
+}
+
+
+
+@media (max-width: 768px){
+    sidebar{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 300px;
+        background-color: white;
+        z-index: 2;
+        transition: all .3s;
+    }
+    .sidebar_logout{
+        display: block;
+    }
+}
+
+
+@media (max-width: 380px){
+    sidebar{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 300px;
+        background-color: white;
+        z-index: 2;
+        transition: all .3s;
+        width: 250px;
+    }
+    .sidebar_logout{
+        display: block;
+    }
+}
